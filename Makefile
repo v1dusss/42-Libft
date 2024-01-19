@@ -6,13 +6,13 @@
 #    By: vsivanat <vsivanat@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/10/14 20:24:52 by vsivanat          #+#    #+#              #
-#    Updated: 2023/10/25 16:08:28 by vsivanat         ###   ########.fr        #
+#    Updated: 2024/01/19 18:16:44 by vsivanat         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 SRC = \
 ft_tolower.c \
-ft_toupper.c\
+ft_toupper.c \
 ft_atoi.c \
 ft_bzero.c \
 ft_calloc.c \
@@ -45,7 +45,7 @@ ft_strncmp.c \
 ft_strnstr.c \
 ft_strrchr.c \
 ft_strtrim.c \
-ft_substr.c\
+ft_substr.c
 
 SRCBONUS = \
 ft_lstnew_bonus.c\
