@@ -6,7 +6,7 @@
 /*   By: vsivanat <vsivanat@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/16 13:14:00 by vsivanat          #+#    #+#             */
-/*   Updated: 2023/10/25 16:10:23 by vsivanat         ###   ########.fr       */
+/*   Updated: 2024/02/05 20:32:28 by vsivanat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,16 +47,6 @@ static size_t	wordcount(char const *s, char c)
 		}
 	}
 	return (word);
-}
-
-static size_t	ft_strlen_c(const char *s, char c)
-{
-	size_t	i;
-
-	i = 0;
-	while (s[i] != '\0' && s[i] != c)
-		++i;
-	return (i);
 }
 
 static char	**ft_fill_arr(char **arr, char const *s, size_t word, char c)
