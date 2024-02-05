@@ -6,22 +6,22 @@
 /*   By: vsivanat <vsivanat@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/20 18:51:48 by vsivanat          #+#    #+#             */
-/*   Updated: 2023/10/25 14:58:42 by vsivanat         ###   ########.fr       */
+/*   Updated: 2024/02/05 20:50:50 by vsivanat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_striteri(char *s, void (*f)(unsigned int, char*))
+void	ft_striteri(char *str, void (*f)(unsigned int, char*))
 {
 	size_t	i;
 
 	i = 0;
-	if (!s)
+	if (!str)
 		return ;
-	while (s[i] != '\0')
+	while (str[i] != '\0')
 	{
-		f(i, &s[i]);
+		f(i, &str[i]);
 		i++;
 	}
 }

@@ -6,7 +6,7 @@
 /*   By: vsivanat <vsivanat@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/12 17:37:49 by vsivanat          #+#    #+#             */
-/*   Updated: 2023/10/21 16:53:41 by vsivanat         ###   ########.fr       */
+/*   Updated: 2024/02/05 20:56:55 by vsivanat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,8 +35,8 @@ static size_t	trim(char const *s1, char const *set, size_t a, int c)
 
 char	*ft_strtrim(char const *s1, char const *set)
 {
-	size_t	a;
-	size_t	z;
+	size_t	front_tirm;
+	size_t	back_tirm;
 	char	*s;
 
 	if (!s1)
@@ -48,7 +48,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 		s = ft_calloc(1, 1);
 		return (s);
 	}
-	a = trim(s1, set, 0, 0);
-	z = trim(s1, set, ft_strlen((char *)s1) - 1, 1);
-	return (ft_substr(s1, a, z - a + 1));
+	front_tirm = trim(s1, set, 0, 0);
+	back_tirm = trim(s1, set, ft_strlen((char *)s1) - 1, 1);
+	return (ft_substr(s1, front_tirm, back_tirm - front_tirm + 1));
 }

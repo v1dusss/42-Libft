@@ -6,24 +6,11 @@
 /*   By: vsivanat <vsivanat@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/16 13:14:00 by vsivanat          #+#    #+#             */
-/*   Updated: 2024/02/05 20:32:28 by vsivanat         ###   ########.fr       */
+/*   Updated: 2024/02/05 21:02:37 by vsivanat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-static void	free_arr(char **arr)
-{
-	size_t	y;
-
-	y = 0;
-	while (arr[y] != NULL)
-	{
-		free(arr[y]);
-		y++;
-	}
-	free(arr);
-}
 
 static size_t	wordcount(char const *s, char c)
 {
@@ -64,7 +51,7 @@ static char	**ft_fill_arr(char **arr, char const *s, size_t word, char c)
 		{
 			arr[word] = ft_substr(&s[i], 0, ft_strlen_c(&s[i], c));
 			if (arr[word] == NULL)
-				return (free_arr(arr), NULL);
+				return (ft_free_arr(arr), NULL);
 			i = i + ft_strlen_c(&s[i], c);
 			word++;
 		}

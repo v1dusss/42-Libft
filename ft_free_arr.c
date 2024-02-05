@@ -1,21 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putendl_fd.c                                    :+:      :+:    :+:   */
+/*   ft_free_arr.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vsivanat <vsivanat@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/13 15:38:52 by vsivanat          #+#    #+#             */
-/*   Updated: 2024/02/05 20:48:52 by vsivanat         ###   ########.fr       */
+/*   Created: 2024/02/05 21:00:59 by vsivanat          #+#    #+#             */
+/*   Updated: 2024/02/05 21:03:24 by vsivanat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putendl_fd(char *str, int fd)
+void	ft_free_arr(char **arr)
 {
-	if (!str)
-		return ;
-	write(fd, str, ft_strlen(str));
-	write(fd, "\n", 1);
+	size_t	y;
+
+	y = 0;
+	while (arr[y] != NULL)
+	{
+		free(arr[y]);
+		y++;
+	}
+	free(arr);
 }

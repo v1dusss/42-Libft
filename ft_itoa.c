@@ -6,7 +6,7 @@
 /*   By: vsivanat <vsivanat@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/13 10:27:31 by vsivanat          #+#    #+#             */
-/*   Updated: 2023/10/22 12:55:18 by vsivanat         ###   ########.fr       */
+/*   Updated: 2024/02/05 21:05:41 by vsivanat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,14 +31,14 @@ static void	rek_convert(char *str, int n, int i)
 
 static char	*edgecase(int minus)
 {
-	char	*s;
+	char	*str;
 
-	s = malloc(12);
-	if (!s && !minus)
+	str = malloc(12);
+	if (!str && !minus)
 		return (NULL);
-	ft_strlcpy(s, "-2147483648", 12);
-	s[ft_strlen(s)] = '\0';
-	return (s);
+	ft_strlcpy(str, "-2147483648", 12);
+	str[ft_strlen(str)] = '\0';
+	return (str);
 }
 
 char	*ft_itoa(int n)

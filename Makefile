@@ -6,7 +6,7 @@
 #    By: vsivanat <vsivanat@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/10/14 20:24:52 by vsivanat          #+#    #+#              #
-#    Updated: 2024/02/05 20:31:25 by vsivanat         ###   ########.fr        #
+#    Updated: 2024/02/05 21:03:18 by vsivanat         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -46,7 +46,8 @@ ft_strnstr.c \
 ft_strrchr.c \
 ft_strtrim.c \
 ft_substr.c \
-ft_strlen_c.c
+ft_strlen_c.c \
+ft_free_arr.c
 
 SRCBONUS = \
 ft_lstnew_bonus.c\
