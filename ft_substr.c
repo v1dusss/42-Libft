@@ -6,7 +6,7 @@
 /*   By: vsivanat <vsivanat@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/12 16:40:01 by vsivanat          #+#    #+#             */
-/*   Updated: 2024/02/05 20:58:11 by vsivanat         ###   ########.fr       */
+/*   Updated: 2024/02/15 17:23:42 by vsivanat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ static void	cpy(char *ptr, char const *str, unsigned int start, size_t len)
 	size_t	i;
 
 	i = 0;
-	while (str[start] != '\0' && i < len)
+	while (str[start] && i < len)
 	{
 		ptr[i] = str[start];
 		start++;

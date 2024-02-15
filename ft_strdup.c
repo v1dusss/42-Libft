@@ -6,7 +6,7 @@
 /*   By: vsivanat <vsivanat@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/12 15:07:47 by vsivanat          #+#    #+#             */
-/*   Updated: 2023/10/21 16:49:43 by vsivanat         ###   ########.fr       */
+/*   Updated: 2024/02/15 17:22:04 by vsivanat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ char	*ft_strdup(const char *s1)
 	s2 = malloc(ft_strlen((char *)s1) + 1);
 	if (!(s2))
 		return (0);
-	while (s1[i] != 0)
+	while (s1[i])
 	{
 		s2[i] = s1[i];
 		i++;

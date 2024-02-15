@@ -6,7 +6,7 @@
 /*   By: vsivanat <vsivanat@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/16 13:14:00 by vsivanat          #+#    #+#             */
-/*   Updated: 2024/02/10 17:29:26 by vsivanat         ###   ########.fr       */
+/*   Updated: 2024/02/15 17:21:30 by vsivanat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,19 +16,16 @@ static size_t	wordcount(char const *s, char c)
 {
 	size_t	word;
 	size_t	i;
-	size_t	a;
 
 	word = 0;
 	i = 0;
-	a = 0;
-	while (s[i] != '\0')
+	while (s[i])
 	{
 		if (s[i] == c)
 			i++;
 		else
 		{
-			a = i;
-			while (s[i] != c && s[i] != '\0')
+			while (s[i] != c && s[i])
 				i++;
 			word++;
 		}

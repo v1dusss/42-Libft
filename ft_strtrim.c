@@ -6,7 +6,7 @@
 /*   By: vsivanat <vsivanat@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/12 17:37:49 by vsivanat          #+#    #+#             */
-/*   Updated: 2024/02/05 20:56:55 by vsivanat         ###   ########.fr       */
+/*   Updated: 2024/02/15 17:23:32 by vsivanat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ static size_t	trim(char const *s1, char const *set, size_t a, int c)
 	size_t	b;
 
 	b = 0;
-	while (set[b] != '\0')
+	while (set[b])
 	{
 		if (s1[a] == set[b])
 		{

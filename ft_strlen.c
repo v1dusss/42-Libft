@@ -6,7 +6,7 @@
 /*   By: vsivanat <vsivanat@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/07 15:35:08 by vsivanat          #+#    #+#             */
-/*   Updated: 2023/10/25 16:10:41 by vsivanat         ###   ########.fr       */
+/*   Updated: 2024/02/15 17:22:55 by vsivanat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ size_t	ft_strlen(const char *str)
 	size_t	c;
 
 	c = 0;
-	while (str[c] != '\0')
+	while (str[c])
 		c++;
 	return (c);
 }

@@ -6,13 +6,13 @@
 /*   By: vsivanat <vsivanat@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/13 10:27:31 by vsivanat          #+#    #+#             */
-/*   Updated: 2024/02/05 21:05:41 by vsivanat         ###   ########.fr       */
+/*   Updated: 2024/02/15 17:32:40 by vsivanat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int	lengt(int n)
+static int	lengt(unsigned int n)
 {
 	int	digit;
 
@@ -56,7 +56,7 @@ char	*ft_itoa(int n)
 			minus = 1;
 			n *= -1;
 		}
-		str = ft_calloc(lengt(n) + minus + 1, sizeof(char));
+		str = ft_calloc(lengt((unsigned int)n) + minus + 1, sizeof(char));
 		if (!str)
 			return (NULL);
 		if (minus)

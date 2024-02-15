@@ -6,7 +6,7 @@
 /*   By: vsivanat <vsivanat@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/20 18:51:48 by vsivanat          #+#    #+#             */
-/*   Updated: 2024/02/05 20:50:50 by vsivanat         ###   ########.fr       */
+/*   Updated: 2024/02/15 17:22:11 by vsivanat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ void	ft_striteri(char *str, void (*f)(unsigned int, char*))
 	i = 0;
 	if (!str)
 		return ;
-	while (str[i] != '\0')
+	while (str[i])
 	{
 		f(i, &str[i]);
 		i++;
