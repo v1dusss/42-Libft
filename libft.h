@@ -6,7 +6,7 @@
 /*   By: vsivanat <vsivanat@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/21 16:55:51 by vsivanat          #+#    #+#             */
-/*   Updated: 2024/02/10 17:17:40 by vsivanat         ###   ########.fr       */
+/*   Updated: 2024/02/15 18:48:12 by vsivanat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ typedef struct s_list
 {
 	void			*content;
 	struct s_list	*next;
-}t_list;
+}				t_list;
 
 char		**ft_split(char const *s, char c);
 int			ft_isspace(int c);
@@ -70,7 +70,5 @@ void		ft_lstiter(t_list *lst, void (*f)(void *));
 t_list		*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
 size_t		ft_strlen_c(const char *str, char c);
 void		ft_free_arr(void **arr);
-
-
 
 #endif
