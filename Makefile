@@ -6,9 +6,15 @@
 #    By: vsivanat <vsivanat@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/10/14 20:24:52 by vsivanat          #+#    #+#              #
-#    Updated: 2024/05/03 12:05:09 by vsivanat         ###   ########.fr        #
+#    Updated: 2024/05/03 19:53:50 by vsivanat         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
+
+NAME = libft.a
+
+CC = cc
+CFLAGS = -c -Wall -Wextra -Werror -I.
+OBJDIR = obj
 
 SRC = \
 ft_atof.c \
@@ -60,31 +66,24 @@ ft_lstlast_bonus.c \
 ft_lstdelone_bonus.c \
 ft_lstclear_bonus.c \
 ft_lstiter_bonus.c \
-ft_lstmap_bonus.c \
-ft_strlower.c \
-ft_strupper.c
+ft_lstmap_bonus.c
 
-NAME = libft.a
-
-COMPILER = cc
-CFLAGS = -c -Wall -Wextra -Werror -I.
-RM = rm -f
-
-OBJECTS = $(SRC:.c=.o)
+OBJ := $(addprefix $(OBJDIR)/, $(SRC:.c=.o))
 
 all: $(NAME)
 
-$(NAME): $(OBJECTS)
-	ar -rcs $(NAME) $(OBJECTS)
+$(NAME): $(OBJ)
+	ar -rcs $(NAME) $(OBJ)
 
-%.o: %.c
-	$(COMPILER) $(CFLAGS) -c $< -o $@
+$(OBJDIR)/%.o: %.c
+	@mkdir -p $(OBJDIR)
+	$(CC) $(CFLAGS) $< -o $@
 
 clean:
-	$(RM) $(OBJECTS)
+	rm -rf $(OBJDIR)
 
 fclean: clean
-	$(RM) $(NAME)
+	rm -f $(NAME)
 
 re: fclean all
 
