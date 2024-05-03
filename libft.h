@@ -6,7 +6,7 @@
 /*   By: vsivanat <vsivanat@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/21 16:55:51 by vsivanat          #+#    #+#             */
-/*   Updated: 2024/04/12 16:26:42 by vsivanat         ###   ########.fr       */
+/*   Updated: 2024/05/03 12:05:57 by vsivanat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,9 +73,8 @@ void				ft_lstiter(t_list *lst, void (*f)(void *));
 t_list				*ft_lstmap(t_list *lst, void *(*f)(void *),
 						void (*del)(void *));
 size_t				ft_strlen_c(const char *str, char c);
+int					ft_strcmp(const char *s1, const char *s2);
 void				ft_free_arr(void **arr);
-char				*ft_strupper(char *str);
-char				*ft_strlower(char *str);
 int					ft_printf(const char *input, ...);
 int					putnbr(unsigned int n);
 int					integer(int n);
