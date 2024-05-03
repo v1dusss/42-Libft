@@ -6,13 +6,13 @@
 /*   By: vsivanat <vsivanat@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/23 13:15:13 by vsivanat          #+#    #+#             */
-/*   Updated: 2024/02/28 16:37:40 by vsivanat         ###   ########.fr       */
+/*   Updated: 2024/05/03 20:30:27 by vsivanat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	putnbr(unsigned int n)
+static int	putnbr(unsigned int n)
 {
 	int	i;
 
@@ -28,7 +28,7 @@ int	putnbr(unsigned int n)
 	return (i += 1);
 }
 
-int	integer(int n)
+static int	integer(int n)
 {
 	int	k;
 
@@ -55,7 +55,7 @@ int	integer(int n)
 	return (k);
 }
 
-int	convert(unsigned int n, char c)
+static int	convert(unsigned int n, char c)
 {
 	int	i;
 
@@ -79,7 +79,7 @@ int	convert(unsigned int n, char c)
 	return (i += 1);
 }
 
-int	convert_p(unsigned long n, char c)
+static int	convert_p(unsigned long n, char c)
 {
 	int	i;
 
@@ -95,7 +95,7 @@ int	convert_p(unsigned long n, char c)
 	return (i += 1);
 }
 
-int	pointer(void *p)
+static int	pointer(void *p)
 {
 	size_t	i;
 	int		k;
