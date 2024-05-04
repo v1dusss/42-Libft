@@ -6,7 +6,7 @@
 #    By: vsivanat <vsivanat@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/10/14 20:24:52 by vsivanat          #+#    #+#              #
-#    Updated: 2024/05/04 17:25:35 by vsivanat         ###   ########.fr        #
+#    Updated: 2024/05/04 17:49:03 by vsivanat         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -17,9 +17,9 @@ CFLAGS := -Wall -Wextra -Werror -I includes
 
 VPATH	:=	src \
 			src/conversion \
-			src/get_next_line \
 			src/list \
 			src/memory \
+			src/other_functions \
 			src/output \
 			src/printf \
 			src/string \
