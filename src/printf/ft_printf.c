@@ -6,18 +6,18 @@
 /*   By: vsivanat <vsivanat@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/22 15:51:50 by vsivanat          #+#    #+#             */
-/*   Updated: 2024/02/28 16:37:15 by vsivanat         ###   ########.fr       */
+/*   Updated: 2024/05/03 20:30:11 by vsivanat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	one_character(int c)
+static int	one_character(int c)
 {
 	return (write(1, &c, 1));
 }
 
-int	string(char *s)
+static int	string(char *s)
 {
 	int	i;
 
@@ -38,7 +38,7 @@ int	string(char *s)
 	return (i);
 }
 
-int	prozent(const char *s, va_list args)
+static int	prozent(const char *s, va_list args)
 {
 	int	count;
 
@@ -65,7 +65,7 @@ int	prozent(const char *s, va_list args)
 	return (count);
 }
 
-size_t	ft_loop(const char *s, va_list *args)
+static size_t	ft_loop(const char *s, va_list *args)
 {
 	int	count;
 	int	i;

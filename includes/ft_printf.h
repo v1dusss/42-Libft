@@ -1,23 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen_c.c                                      :+:      :+:    :+:   */
+/*   ft_printf.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vsivanat <vsivanat@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/02/05 20:30:55 by vsivanat          #+#    #+#             */
-/*   Updated: 2024/02/15 18:46:47 by vsivanat         ###   ########.fr       */
+/*   Created: 2024/05/04 17:33:12 by vsivanat          #+#    #+#             */
+/*   Updated: 2024/05/04 17:36:45 by vsivanat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#ifndef FT_PRINTF_H
+# define FT_PRINTF_H
 
-size_t	ft_strlen_c(const char *str, char c)
-{
-	size_t	i;
+# include <stdarg.h>
+# include <stdlib.h>
+# include <unistd.h>
 
-	i = 0;
-	while (str[i] && str[i] != c)
-		i++;
-	return (i);
-}
+int	putnbr(unsigned int n);
+int	integer(int n);
+int	convert(unsigned int n, char c);
+int	convert_p(unsigned long n, char c);
+int	pointer(void *p);
+int	ft_printf(const char *input, ...);
+
+#endif
