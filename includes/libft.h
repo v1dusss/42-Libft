@@ -6,14 +6,13 @@
 /*   By: vsivanat <vsivanat@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/21 16:55:51 by vsivanat          #+#    #+#             */
-/*   Updated: 2024/05/03 12:05:57 by vsivanat         ###   ########.fr       */
+/*   Updated: 2024/05/04 17:24:19 by vsivanat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
 
-# include <limits.h>
 # include <stdarg.h>
 # include <stdlib.h>
 # include <unistd.h>
@@ -23,6 +22,10 @@ typedef struct s_list
 	void			*content;
 	struct s_list	*next;
 }					t_list;
+
+# ifndef GNL_BUFFER_SIZE
+#  define GNL_BUFFER_SIZE 100
+# endif
 
 double				ft_atof(const char *str);
 char				**ft_split(char const *s, char c);
@@ -72,13 +75,14 @@ void				ft_lstclear(t_list **lst, void (*del)(void *));
 void				ft_lstiter(t_list *lst, void (*f)(void *));
 t_list				*ft_lstmap(t_list *lst, void *(*f)(void *),
 						void (*del)(void *));
-size_t				ft_strlen_c(const char *str, char c);
+int					ft_strlen_c(const char *str, char c);
 int					ft_strcmp(const char *s1, const char *s2);
 void				ft_free_arr(void **arr);
-int					ft_printf(const char *input, ...);
 int					putnbr(unsigned int n);
 int					integer(int n);
 int					convert(unsigned int n, char c);
 int					pointer(void *p);
+int					ft_printf(const char *input, ...);
+char				*get_next_line(int fd);
 
 #endif

@@ -6,7 +6,7 @@
 #    By: vsivanat <vsivanat@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/10/14 20:24:52 by vsivanat          #+#    #+#              #
-#    Updated: 2024/05/04 00:04:47 by vsivanat         ###   ########.fr        #
+#    Updated: 2024/05/04 17:25:35 by vsivanat         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -17,10 +17,11 @@ CFLAGS := -Wall -Wextra -Werror -I includes
 
 VPATH	:=	src \
 			src/conversion \
+			src/get_next_line \
 			src/list \
 			src/memory \
 			src/output \
-			src/print \
+			src/printf \
 			src/string \
 			includes
 
@@ -65,15 +66,16 @@ SRC :=		ft_atof.c \
 			ft_toupper.c \
 			ft_printf.c \
 			ft_print_cases.c \
-			ft_lstnew_bonus.c \
-			ft_lstadd_front_bonus.c \
-			ft_lstadd_back_bonus.c \
-			ft_lstsize_bonus.c \
-			ft_lstlast_bonus.c \
-			ft_lstdelone_bonus.c \
-			ft_lstclear_bonus.c \
-			ft_lstiter_bonus.c \
-			ft_lstmap_bonus.c
+			ft_lstnew.c \
+			ft_lstadd_front.c \
+			ft_lstadd_back.c \
+			ft_lstsize.c \
+			ft_lstlast.c \
+			ft_lstdelone.c \
+			ft_lstclear.c \
+			ft_lstiter.c \
+			ft_lstmap.c \
+			get_next_line.c
 
 OBJDIR := obj
 OBJ := $(addprefix $(OBJDIR)/, $(SRC:.c=.o))
@@ -81,11 +83,11 @@ OBJ := $(addprefix $(OBJDIR)/, $(SRC:.c=.o))
 all: $(NAME)
 
 $(NAME): $(OBJ)
-	$(CC) $(CFLAGS) -c $(NAME) $(OBJ)
+	@ar rcs $(NAME) $(OBJ)
 
 $(OBJDIR)/%.o: %.c
 	@mkdir -p $(OBJDIR)
-	$(CC) $(CFLAGS) -c $< -o $@
+	@$(CC) $(CFLAGS) -c $< -o $@
 
 clean:
 	rm -rf $(OBJDIR)
