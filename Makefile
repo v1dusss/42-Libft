@@ -6,7 +6,7 @@
 #    By: vsivanat <vsivanat@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/10/14 20:24:52 by vsivanat          #+#    #+#              #
-#    Updated: 2024/05/04 17:49:03 by vsivanat         ###   ########.fr        #
+#    Updated: 2024/05/05 14:01:52 by vsivanat         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -84,16 +84,19 @@ all: $(NAME)
 
 $(NAME): $(OBJ)
 	@ar rcs $(NAME) $(OBJ)
+	@echo "\033[1;32m✅ [Libft created]\033[0m"
 
 $(OBJDIR)/%.o: %.c
 	@mkdir -p $(OBJDIR)
 	@$(CC) $(CFLAGS) -c $< -o $@
 
 clean:
-	rm -rf $(OBJDIR)
+	@rm -rf $(OBJDIR)
 
-fclean: clean
-	rm -f $(NAME)
+fclean:
+	@echo "\033[0;37m🧹 [Libft deleted]\033[0m"
+	@make clean
+	@rm -f $(NAME)
 
 re: fclean all
 
