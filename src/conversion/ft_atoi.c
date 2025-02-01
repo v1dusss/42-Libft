@@ -6,7 +6,7 @@
 /*   By: vsivanat <vsivanat@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/08 14:43:47 by vsivanat          #+#    #+#             */
-/*   Updated: 2024/02/10 17:36:57 by vsivanat         ###   ########.fr       */
+/*   Updated: 2025/01/31 18:54:32 by vsivanat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,8 @@ int	ft_atoi(const char *str)
 	i = 0;
 	a = 1;
 	k = 0;
+	if (str == NULL && str[i] == '\0')
+		return (0);
 	while (ft_isspace(str[i]))
 		i++;
 	if (str[i] == '-')
